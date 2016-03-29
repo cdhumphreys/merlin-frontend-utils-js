@@ -1,0 +1,21 @@
+{
+  "name": "@cnbritain/common-js",
+  "version": "1.0.0",
+  "description": "Common javascripts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnduk/common-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnduk/common-js/issues"
+  },
+  "homepage": "https://github.com/cnduk/common-js#readme",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^1.3.3"
+  },
+  "scripts": {
+    "docs": "jsdoc2md -v js/*.js > readme.md"
+  }
+}
