@@ -1,17 +1,17 @@
 {
-  "name": "@cnbritain/common-js",
+  "name": "@cnbritain/merlin-frontend-utils-js",
   "version": "1.0.0",
-  "description": "Common javascripts",
+  "description": "Javascript utilities",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnduk/common-js.git"
+    "url": "git+https://github.com/cnduk/merlin-frontend-utils-js.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cnduk/common-js/issues"
+    "url": "https://github.com/cnduk/merlin-frontend-utils-js/issues"
   },
-  "homepage": "https://github.com/cnduk/common-js#readme",
+  "homepage": "https://github.com/cnduk/merlin-frontend-utils-js#readme",
   "devDependencies": {
     "jsdoc-to-markdown": "^1.3.3"
   },
