@@ -13,9 +13,11 @@
   },
   "homepage": "https://github.com/cnduk/merlin-frontend-utils-js#readme",
   "devDependencies": {
-    "jsdoc-to-markdown": "^1.3.3"
+    "jsdoc-to-markdown": "^1.3.3",
+    "jshint": "^2.9.1"
   },
   "scripts": {
-    "docs": "jsdoc2md -v js/*.js > readme.md"
+    "docs": "jsdoc2md -v js/*.js > readme.md",
+    "jshint": "jshint js"
   }
 }
