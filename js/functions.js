@@ -120,9 +120,11 @@ export function createEventTemplate(type, target, eventData){
         'timeStamp': Date.now(),
         'type': type
     };
-    for(var key in eventData){
-        if(hasOwnProperty(eventData, key)){
-            base[key] = eventData[key];
+    if(eventData){
+        for(var key in eventData){
+            if(hasOwnProperty(eventData, key)){
+                base[key] = eventData[key];
+            }
         }
     }
     return base;
