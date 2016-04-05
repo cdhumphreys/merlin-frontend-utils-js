@@ -14,7 +14,7 @@ import { supportBoxModel } from "./detect";
 export function addClass( el, cls ){
     if( el.classList ) return el.classList.add( cls );
     el.className += " " + cls;
-};
+}
 
 /**
  * Adds an event to an element
@@ -25,7 +25,7 @@ export function addClass( el, cls ){
 export function addEvent( el, type, fn ){
     if( document.addEventListener ) return el.addEventListener( type, fn, false );
     return el.attachEvent( "on" + type, fn );
-};
+}
 
 /**
  * Adds an event that will fire once and then remove itself
@@ -39,7 +39,7 @@ export function addEventOnce( el, type, fn ){
         removeEvent( el, type, _addEventOnce );
     }
     return addEvent( el, type, _addEventOnce );
-};
+}
 
 /**
  * Adds html to a node
@@ -52,7 +52,7 @@ export function addHtml( node ){
         node.appendChild( tmp.firstChild );
         tmp.innerHTML = "";
     };
-};
+}
 
 /**
  * Basic ajax function
@@ -84,7 +84,7 @@ export function ajax( options ){
         request.send( null );
 
     });
-};
+}
 
 /**
  * Clamps a value to the min and max. Also set up to allow currying.
@@ -104,7 +104,7 @@ export function clamp( min, max, value1 ){
         if( value2 > max ) return max;
         return value2;
     };
-};
+}
 
 /**
  * Debounce function, allows one function to be ran `wait` milliseconds after.
@@ -131,7 +131,7 @@ export function debounce( fn, wait, scope, immediate ){
         timeout = setTimeout(later, wait);
         if (callNow) fn.apply(context, args);
     };
-};
+}
 
 /**
  * Creates a function that will delegate events to a selector
@@ -158,7 +158,7 @@ export function delegate( selector, fn, ctx ){
             fn.apply( context, arguments );
         }
     };
-};
+}
 
 /**
  * Exits fullscreen mode for the element
@@ -174,7 +174,7 @@ export function exitFullscreen( el ) {
     } else if (el.webkitExitFullscreen) {
         el.webkitExitFullscreen();
     }
-};
+}
 
 /**
  * Loop over a collection and shift the item from the collection
@@ -188,7 +188,7 @@ export function forEachShift( collection, fn ){
         fn( item );
     }
     item = null;
-};
+}
 
 export function getBoundingClientRect( el ){
     if( el.getBoundingClientRect ){
@@ -204,7 +204,7 @@ export function getBoundingClientRect( el ){
         "top": 0,
         "width": width
     };
-};
+}
 
 /**
  * Gets the elements offset. Based off of jquerys implementation
@@ -239,7 +239,7 @@ export function getElementOffset( el ){
         "top": top,
         "width": elementBox.width
     };
-};
+}
 
 /**
  * Gets the event target
@@ -249,7 +249,7 @@ export function getElementOffset( el ){
 export function getEventTarget( e ) {
   var eve = e || window.event;
   return eve.target || eve.srcElement;
-};
+}
 
 /**
  * Gets the iframe element based on the window
@@ -264,7 +264,7 @@ export function getIframeFromWindow( window ){
         return false;
     }
     return frame;
-};
+}
 
 /**
  * Gets the parent element matching the selector. If it doesn't match, returns
@@ -278,7 +278,7 @@ export function getParent( el, selector ){
     var parent = getParentUntil( el, selector );
     if( parent !== document && parent.matches( selector ) ) return parent;
     return false;
-};
+}
 
 /**
  * Gets the previous element matching the selector. If it doesn't match,
@@ -292,7 +292,7 @@ export function getPrevious( el, selector ){
     var previous = getPreviousElementUntil( el, selector );
     if( previous !== document && previous.matches( selector ) ) return previous;
     return false;
-};
+}
 
 /**
  * Gets the parent till the selector or the root.
@@ -306,7 +306,7 @@ export function getParentUntil( el, selector ){
         if( parent.matches( selector ) ) return parent;
     } while( (parent = parent.parentNode) && parent.nodeType === 1 );
     return parent;
-};
+}
 
 /**
  * Gets the previous element till the selector or the root
@@ -320,7 +320,7 @@ export function getPreviousElementUntil( el, selector ){
         if( previous.matches( selector ) ) return previous;
     } while( (previous = previous.previousElementSibling) && previous.nodeType === 1 );
     return previous;
-};
+}
 
 /**
  * Gets the scroll left of the element
@@ -332,7 +332,7 @@ export function getScrollLeft( el ){
         return el.scrollLeft;
     }
     return getWindowScrollLeft();
-};
+}
 
 /**
  * Gets the scroll top of the element
@@ -344,7 +344,7 @@ export function getScrollTop( el ){
         return el.scrollTop;
     }
     return getWindowScrollTop();
-};
+}
 
 /**
  * Gets the scrollleft of the window
@@ -353,7 +353,7 @@ export function getScrollTop( el ){
 export function getWindowScrollLeft(){
     return ( window.pageXOffset || document.documentElement.scrollLeft ) -
            ( document.documentElement.clientLeft || 0 );
-};
+}
 
 /**
  * Gets the scrolltop of the window
@@ -362,7 +362,7 @@ export function getWindowScrollLeft(){
 export function getWindowScrollTop(){
     return ( window.pageYOffset || document.documentElement.scrollTop ) -
            ( document.documentElement.clientTop || 0 );
-};
+}
 
 /**
  * Checks if the element has a class
@@ -373,7 +373,7 @@ export function getWindowScrollTop(){
 export function hasClass( el, cls ) {
     if( el.classList ) return el.classList.contains( cls );
     return !!el.className.match( new RegExp( "(\\s|^)" + cls + "(\\s|$)" ) );
-};
+}
 
 /**
  * hasOwnProperty that prevents contamination from the object being tested
@@ -383,7 +383,7 @@ export function hasClass( el, cls ) {
  */
 export function hasOwnProperty( obj, key ){
     return Object.prototype.hasOwnProperty.call( obj, key );
-};
+}
 
 /**
  * Checks if the placement is in an article slot
@@ -392,7 +392,7 @@ export function hasOwnProperty( obj, key ){
  */
 export function isArticleAdSlot( placement ){
     return placement === "article-side" || placement === "article-infinite";
-};
+}
 
 /**
  * Checks if a value is defined
@@ -401,7 +401,7 @@ export function isArticleAdSlot( placement ){
  */
 export function isDefined( value ){
     return value !== null && value !== undefined;
-};
+}
 
 /**
  * Checks if the value is an empty string
@@ -410,7 +410,7 @@ export function isDefined( value ){
  */
 export function isEmptyString( value ){
     return typeof value === "string" && value === "";
-};
+}
 
 /**
  * Checks if the placement is a header slot
@@ -419,7 +419,7 @@ export function isEmptyString( value ){
  */
 export function isHeaderAdSlot( placement ){
     return placement === "nav-above";
-};
+}
 
 /**
  * Checks if the placement is a splash slot
@@ -428,7 +428,7 @@ export function isHeaderAdSlot( placement ){
  */
 export function isSplashAdSlot( placement ){
     return placement === "tag-inside" || placement === "tag-infinite";
-};
+}
 
 /**
  * Checks if win is a window element
@@ -437,7 +437,7 @@ export function isSplashAdSlot( placement ){
  */
 export function isWindow( win ){
     return win.self === win;
-};
+}
 
 /**
  * Loads a script file into the page
@@ -467,7 +467,7 @@ export function loadScript( url, options ){
         };
         node.appendChild( script );
     });
-};
+}
 
 /**
  * Loads any social scripts. Includes twitter, facebook, vine and instagram
@@ -510,7 +510,7 @@ export function loadSocialScripts(){
 
     return Promise.all([ twitterPromise, vinePromise, facebookPromise,
         instagramPromise ]);
-};
+}
 
 /**
  * Inverts the value
@@ -527,7 +527,7 @@ export function not( value ){
         };
     }
     return !value;
-};
+}
 
 /**
  * Runs loadFn once the page has loaded
@@ -555,7 +555,7 @@ export function onPageLoad( loadFn ){
         }
     }
 
-};
+}
 onPageLoad._fns = [];
 
 /**
@@ -585,7 +585,7 @@ export function onPageReady( readyFn ){
         }
     }
 
-};
+}
 onPageReady._fns = [];
 
 /**
@@ -602,7 +602,7 @@ export function padValue( value, width, chr ) {
         return str;
     }
     return ( new Array( width - str.length + 1 ) ).join( character ) + str;
-};
+}
 
 /**
  * Generates a random id
@@ -613,7 +613,7 @@ export function randomUUID(){
         var r = Math.random()*16|0, v = c === "x" ? r : (r&0x3|0x8);
         return v.toString(16);
     });
-};
+}
 
 /**
  * Removes a class from an element
@@ -625,7 +625,7 @@ export function removeClass( el, cls ){
     if( !hasClass( el, cls ) ) return;
     var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
     el.className = el.className.replace( reg, " " );
-};
+}
 
 /**
  * Removes the element from the tree
@@ -634,7 +634,7 @@ export function removeClass( el, cls ){
 export function removeElement( el ){
     if( !el.parentNode ) return;
     el.parentNode.removeChild( el );
-};
+}
 
 /**
  * Removes an event from an element
@@ -645,7 +645,7 @@ export function removeElement( el ){
 export function removeEvent( el, type, fn ){
     if( document.removeEventListener ) return el.removeEventListener( type, fn );
     return el.detachEvent( "on" + type, fn );
-};
+}
 
 /**
  * Throttles an event being fired by the threshold
@@ -674,7 +674,7 @@ export function throttle( fn, threshhold, scope ) {
             fn.apply( context, args );
         }
     };
-};
+}
 
 /**
  * Converts a value to a boolean
@@ -685,7 +685,7 @@ export function toBoolean( value ){
     if( !isDefined( value ) || value === "" ) return false;
     if( value === "true" ) return true;
     return !!value;
-};
+}
 
 /**
  * Toggles a class on an element
@@ -695,7 +695,7 @@ export function toBoolean( value ){
 export function toggleClass( el, cls ){
     if( hasClass( el, cls ) ) return removeClass( el, cls );
     addClass( el, cls );
-};
+}
 
 /**
  * Unescapes a value from jinja
@@ -708,4 +708,4 @@ export function unescapeJinjaValue(value){
     var unescaped = tmp.textContent;
     tmp = null;
     return unescaped;
-};
+}
