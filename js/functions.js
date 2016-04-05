@@ -107,6 +107,28 @@ export function clamp( min, max, value1 ){
 }
 
 /**
+ * Creates an object for events
+ * @param  {String} type      The type of event
+ * @param  {Object} target    The thing that emitted the event
+ * @param  {Object} eventData Some data
+ * @return {Object}
+ */
+export function createEventTemplate(type, target, eventData){
+    var base = {
+        'bubbles': false,
+        'target': target,
+        'timeStamp': Date.now(),
+        'type': type
+    };
+    for(var key in eventData){
+        if(hasOwnProperty(eventData, key)){
+            base[key] = eventData[key];
+        }
+    }
+    return base;
+}
+
+/**
  * Debounce function, allows one function to be ran `wait` milliseconds after.
  * @param  {Function} fn
  * @param  {Number}   wait      Number of milliseconds
