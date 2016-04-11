@@ -95,9 +95,11 @@ HTML5 video support
     * [.addHtml(node)](#module_functions.addHtml)
     * [.ajax(options)](#module_functions.ajax) ⇒ <code>Promise</code>
     * [.clamp(min, max, value1)](#module_functions.clamp) ⇒ <code>Number/Function</code>
+    * [.createEventTemplate(type, target, eventData)](#module_functions.createEventTemplate) ⇒ <code>Object</code>
     * [.debounce(fn, wait, scope, immediate)](#module_functions.debounce) ⇒ <code>function</code>
     * [.delegate(selector, fn, ctx)](#module_functions.delegate) ⇒ <code>function</code>
     * [.exitFullscreen(el)](#module_functions.exitFullscreen)
+    * [.fireEvent(el, type, bubble, cancelable)](#module_functions.fireEvent) ⇒ <code>Boolean</code>
     * [.forEachShift(collection, fn)](#module_functions.forEachShift)
     * [.getElementOffset(el)](#module_functions.getElementOffset) ⇒ <code>Object</code>
     * [.getEventTarget(e)](#module_functions.getEventTarget) ⇒ <code>\*</code>
@@ -206,6 +208,19 @@ Clamps a value to the min and max. Also set up to allow currying.
 | max | <code>Number</code> | 
 | value1 | <code>Number</code> | 
 
+<a name="module_functions.createEventTemplate"></a>
+
+### functions.createEventTemplate(type, target, eventData) ⇒ <code>Object</code>
+Creates an object for events
+
+**Kind**: static method of <code>[functions](#module_functions)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>String</code> | The type of event |
+| target | <code>Object</code> | The thing that emitted the event |
+| eventData | <code>Object</code> | Some data |
+
 <a name="module_functions.debounce"></a>
 
 ### functions.debounce(fn, wait, scope, immediate) ⇒ <code>function</code>
@@ -243,6 +258,21 @@ Exits fullscreen mode for the element
 | Param | Type |
 | --- | --- |
 | el | <code>HTMLNode</code> | 
+
+<a name="module_functions.fireEvent"></a>
+
+### functions.fireEvent(el, type, bubble, cancelable) ⇒ <code>Boolean</code>
+Fires an event on an element
+
+**Kind**: static method of <code>[functions](#module_functions)</code>  
+**Returns**: <code>Boolean</code> - Was the event cancelled?  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| el | <code>HTMLElement</code> |  |
+| type | <code>String</code> | The type of event |
+| bubble | <code>Boolean</code> | Should the event bubble? |
+| cancelable | <code>Boolean</code> | Should the event be cancelable? |
 
 <a name="module_functions.forEachShift"></a>
 
