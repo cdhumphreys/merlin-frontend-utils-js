@@ -392,6 +392,15 @@ export function getScrollTop( el ){
 }
 
 /**
+ * Creates a key based on the brand abbreviation
+ * @param  {String} abbr
+ * @return {String}
+ */
+export function getNamespaceKey(abbr){
+    return 'cnd_' + abbr;
+}
+
+/**
  * Gets the scrollleft of the window
  * @return {Number}
  */
