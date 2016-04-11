@@ -201,6 +201,27 @@ export function exitFullscreen( el ) {
 }
 
 /**
+ * Fires an event on an element
+ * @param  {HTMLElement} el
+ * @param  {String} type       The type of event
+ * @param  {Boolean} bubble     Should the event bubble?
+ * @param  {Boolean} cancelable Should the event be cancelable?
+ * @return {Boolean}            Was the event cancelled?
+ */
+export function fireEvent(el, type, bubble, cancelable){
+    var e = null;
+    if(document.createEventObject){
+        e = document.createEventObject();
+        return el.fireEvent('on' + type, e);
+    }
+    var _bubble = isDefined(bubble) ? bubble : false;
+    var _cancelable = isDefined(cancelable) ? cancelable : true;
+    e = document.createEvent("HTMLEvents");
+    e.initEvent(type, _bubble, _cancelable);
+    return !el.dispatchEvent(e);
+}
+
+/**
  * Loop over a collection and shift the item from the collection
  * @param  {Array}   collection
  * @param  {Function} fn
