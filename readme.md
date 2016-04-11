@@ -110,6 +110,7 @@ HTML5 video support
     * [.getPreviousElementUntil(el, selector)](#module_functions.getPreviousElementUntil) ⇒ <code>Object</code>
     * [.getScrollLeft(el)](#module_functions.getScrollLeft) ⇒ <code>Number</code>
     * [.getScrollTop(el)](#module_functions.getScrollTop) ⇒ <code>Number</code>
+    * [.getNamespaceKey(abbr)](#module_functions.getNamespaceKey) ⇒ <code>String</code>
     * [.getWindowScrollLeft()](#module_functions.getWindowScrollLeft) ⇒ <code>Number</code>
     * [.getWindowScrollTop()](#module_functions.getWindowScrollTop) ⇒ <code>Number</code>
     * [.hasClass(el, cls)](#module_functions.hasClass) ⇒ <code>Boolean</code>
@@ -391,6 +392,17 @@ Gets the scroll top of the element
 | Param | Type |
 | --- | --- |
 | el | <code>HTMLNode/Window</code> | 
+
+<a name="module_functions.getNamespaceKey"></a>
+
+### functions.getNamespaceKey(abbr) ⇒ <code>String</code>
+Creates a key based on the brand abbreviation
+
+**Kind**: static method of <code>[functions](#module_functions)</code>  
+
+| Param | Type |
+| --- | --- |
+| abbr | <code>String</code> | 
 
 <a name="module_functions.getWindowScrollLeft"></a>
 
