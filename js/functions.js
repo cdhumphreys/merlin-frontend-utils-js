@@ -440,6 +440,16 @@ export function hasOwnProperty( obj, key ){
 }
 
 /**
+ * Inserts the child element before the reference
+ * @param  {HTMLElement} child
+ * @param  {HTMLElement} ref
+ * @return {HTMLElement}       The child
+ */
+export function insertBefore(child, ref){
+    return ref.parentNode.insertBefore(child, ref);
+}
+
+/**
  * Checks if the placement is in an article slot
  * @param  {String}  placement
  * @return {Boolean}
