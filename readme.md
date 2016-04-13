@@ -115,6 +115,7 @@ HTML5 video support
     * [.getWindowScrollTop()](#module_functions.getWindowScrollTop) ⇒ <code>Number</code>
     * [.hasClass(el, cls)](#module_functions.hasClass) ⇒ <code>Boolean</code>
     * [.hasOwnProperty(obj, key)](#module_functions.hasOwnProperty) ⇒ <code>Boolean</code>
+    * [.insertBefore(child, ref)](#module_functions.insertBefore) ⇒ <code>HTMLElement</code>
     * [.isArticleAdSlot(placement)](#module_functions.isArticleAdSlot) ⇒ <code>Boolean</code>
     * [.isDefined(value)](#module_functions.isDefined) ⇒ <code>Boolean</code>
     * [.isEmptyString(value)](#module_functions.isEmptyString) ⇒ <code>Boolean</code>
@@ -439,6 +440,19 @@ hasOwnProperty that prevents contamination from the object being tested
 | --- | --- |
 | obj | <code>Object</code> | 
 | key | <code>String</code> | 
+
+<a name="module_functions.insertBefore"></a>
+
+### functions.insertBefore(child, ref) ⇒ <code>HTMLElement</code>
+Inserts the child element before the reference
+
+**Kind**: static method of <code>[functions](#module_functions)</code>  
+**Returns**: <code>HTMLElement</code> - The child  
+
+| Param | Type |
+| --- | --- |
+| child | <code>HTMLElement</code> | 
+| ref | <code>HTMLElement</code> | 
 
 <a name="module_functions.isArticleAdSlot"></a>
 
