@@ -49,7 +49,9 @@ export function addHtml( node ){
     var tmp = document.createElement("div");
     return function addHtml_inner( html ){
         tmp.innerHTML = html;
-        node.appendChild( tmp.firstChild );
+        while(tmp.children.length > 0){
+            node.appendChild( tmp.children[0] );
+        }
         tmp.innerHTML = "";
     };
 }
