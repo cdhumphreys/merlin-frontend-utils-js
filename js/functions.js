@@ -1,6 +1,17 @@
 "use strict";
 
 /**
+ * Modifies Element.prototype.matches
+ * Vendor prefixes
+ */
+Element.prototype.matches = Element.prototype.matchesSelector ||
+                            Element.prototype.matches ||
+                            Element.prototype.msMatchesSelector ||
+                            Element.prototype.webkitMatchesSelector ||
+                            Element.prototype.mozMatchesSelector ||
+                            Element.prototype.oMatchesSelector;
+
+/**
  * @module functions
  */
 
